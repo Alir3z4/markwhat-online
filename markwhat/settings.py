@@ -1,5 +1,6 @@
 import os
 
+# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', '')
 TEMPLATE_DEBUG = DEBUG
 
@@ -10,11 +11,6 @@ PROJECT_DIR = os.path.abspath(os.path.join(
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
