@@ -16,7 +16,7 @@ class WhatForm(forms.Form):
     )
 
     text = forms.CharField(
-        label=_("text"),
+        label=_("Text"),
         widget=forms.Textarea(),
         min_length=3,
         required=True
