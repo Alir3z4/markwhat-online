@@ -16,7 +16,6 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -33,7 +32,6 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'markwhat.urls'
-
 WSGI_APPLICATION = 'markwhat.wsgi.application'
 
 TEMPLATE_DIRS = (
@@ -47,11 +45,11 @@ DATABASES = {}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
+
 USE_TZ = True
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
@@ -67,7 +65,6 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, '../static/')
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 
-
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
@@ -76,7 +73,6 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 MEDIA_URL = '/media/'
-
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
