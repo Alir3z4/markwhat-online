@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block content %}
+    <div class="col-lg-12">
+        <button class="col-lg-4 btn btn-lg btn-default" id="markdown">{% trans "Markdown" %}</button>
+        <button class="col-lg-4 btn btn-lg btn-default" id="restructuredtext">{% trans "ReStructuredText" %}</button>
+        <button class="col-lg-4 btn btn-lg btn-default" id="textile">{% trans "Textile" %}</button>
+    </div>
     <div class="col-lg-6">
         <textarea class="form-control" style="width: 100%;"  name="markwhat" id="markwhat_textarea" rows="23"></textarea>
     </div>
