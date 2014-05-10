@@ -19,6 +19,16 @@
 {% block extra_js %}
     <script type="text/javascript">
         $(document).ready(function(e){
+
+            var markwhat;
+
+            function setMarkwhat(markwhat_name) {
+                markwhat = markwhat_name;
+            }
+
+            function getMarkwhat() {
+                return markwhat;
+            }
             $('#markwhat_textarea').keypress(function(){
                 $.ajax({
                     type: "POST",
