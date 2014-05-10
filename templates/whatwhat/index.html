@@ -30,6 +30,19 @@
                 return markwhat;
             }
 
+            function parseMarkwhat() {
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json",
+                    url: "{% url 'mark_it_what' %}",
+                    data: JSON.stringify({"parser": getMarkwhat(), "what": $('#markwhat_textarea').val()}),
+                    success: function(data) {
+                        $("#markup_textarea").text(data.text);
+                    },
+                    dataType: "json"
+                });
+            }
+
             $("button").click(function(){
                 $("button.btn-primary").each(function(){
                     $(this).removeClass("btn-primary");
@@ -45,17 +58,9 @@
 
             $("#markwhat_textarea").focus();
             $('#markwhat_textarea').keypress(function(){
-                $.ajax({
-                    type: "POST",
-                    contentType: "application/json",
-                    url: "{% url 'mark_it_what' %}",
-                    data: JSON.stringify({"parser": getMarkwhat(), "what": $(this).val()}),
-                    success: function(data) {
-                        $("#markup_textarea").text(data.text);
-                    },
-                    dataType: "json"
-                });
+                parseMarkwhat();
             });
+
         });
     </script>
 {% endblock %}
