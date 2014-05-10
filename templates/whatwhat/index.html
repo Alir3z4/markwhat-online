@@ -1,28 +1,5 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block content %}
-    <h1>Indexianto!</h1>
-    <hr>
-    <form action="" method="post">
-        {% csrf_token %}
-        <div>
-            {% for field in form %}
-                {% if field.errors %}
-                    <ul>
-                        {% for error in field.errors %}
-                            <li><p class="text-danger">{{ error }}</p></li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-                {{ field.label_tag }}
-                {{ field }}
-                <span class="help-block">{{ field.help_text }}</span>
-            {% endfor %}
-        </div>
-        <button type="submit">{% trans "Mark it up" %}</button>
-    </form>
-    <hr>
-    <div>
-        <textarea rows="10" cols="40">{{ markuped_text|safe }}</textarea>
     </div>
 {% endblock %}
