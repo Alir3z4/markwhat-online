@@ -29,6 +29,18 @@
             function getMarkwhat() {
                 return markwhat;
             }
+
+            $("button").click(function(){
+                $("button.btn-primary").each(function(){
+                    $(this).removeClass("btn-primary");
+                    $(this).addClass("btn-default");
+                });
+                $(this).removeClass("btn-default");
+                $(this).addClass("btn-primary");
+
+                setMarkwhat($(this).attr("id"));
+            });
+
             $('#markwhat_textarea').keypress(function(){
                 $.ajax({
                     type: "POST",
