@@ -43,9 +43,9 @@
                     type: "POST",
                     contentType: "application/json",
                     url: "{% url 'mark_it_what' %}",
-                    data: JSON.stringify({"parser": getMarkwhat(), "what": $('#markwhat_textarea').val()}),
+                    data: JSON.stringify({"parser": getMarkwhat(), "what": getMarkText()}),
                     success: function(data) {
-                        $("#markup_textarea").text(data.text);
+                        setMarkupText(data.text)
                     },
                     dataType: "json"
                 });
