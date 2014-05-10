@@ -9,4 +9,21 @@
     </div>
 {% endblock %}
 
+{% block extra_js %}
+    <script type="text/javascript">
+        $(document).ready(function(e){
+            $('#markwhat_textarea').keypress(function(){
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json",
+                    url: "{% url 'mark_it_what' %}",
+                    data: JSON.stringify({"parser": 'markdown', "what": $(this).val()}),
+                    success: function(data) {
+                        $("#markup_textarea").text(data.text);
+                    },
+                    dataType: "json"
+                });
+            });
+        });
+    </script>
 {% endblock %}
