@@ -41,6 +41,7 @@
                 setMarkwhat($(this).attr("id"));
             });
 
+            $("#markdown").click();
             $('#markwhat_textarea').keypress(function(){
                 $.ajax({
                     type: "POST",
