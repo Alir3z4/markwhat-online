@@ -119,3 +119,5 @@ LOGGING = {
         }
     }
 }
+
+TEST_RUNNER = 'basement.tests.database_less_test_runner.DataBaseLessTestRunner'
