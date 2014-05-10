@@ -34,7 +34,7 @@ env.lvenv_path = '../%(venv_name)s' % env
 env.lactivate = "source %(lvenv_path)s/bin/activate"
 
 # Env names
-env.env_name = '<MAIN_APP_ENV>'
+env.env_name = 'markwhat'
 
 
 apps = [
