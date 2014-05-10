@@ -381,6 +381,7 @@ def deploy():
     Deploy the project to production server
     """
     validate()
+    run_tests()
     git_push()
     git_push_pro()
 
