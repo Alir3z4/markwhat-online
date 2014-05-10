@@ -42,6 +42,8 @@
             });
 
             $("#markdown").click();
+
+            $("#markwhat_textarea").focus();
             $('#markwhat_textarea').keypress(function(){
                 $.ajax({
                     type: "POST",
