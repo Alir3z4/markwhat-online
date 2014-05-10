@@ -33,6 +33,11 @@
             function getMarkText() {
                 return $('#markwhat_textarea').val();
             }
+
+            function setMarkupText(text) {
+                $("#markup_textarea").text(text);
+            }
+
             function parseMarkwhat() {
                 $.ajax({
                     type: "POST",
