@@ -47,9 +47,45 @@
     </style>
 </head>
 <body>
-<div class="container">
-{% block content %}{% endblock %}
+<div id="wrap">
+    <div id="main" class="container">
+        {% block content %}{% endblock %}
+    </div>
 </div>
+<!-- Footer -->
+    <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+        <div class="container" style="margin: 0 auto;">
+            <div class="row col-lg-2" style='margin: 0 13px;'>
+                <ul class="list-unstyled">
+                    <li class="title">{% trans "Parsers" %}</li>
+                    <li><a href="http://daringfireball.net/projects/markdown/">{% trans "Markdown" %}</a></li>
+                    <li><a href="http://docutils.sourceforge.net/rst.html">{% trans "ReStructuredText" %}</a></li>
+                    <li><a href="http://redcloth.org/textile">{% trans "Textile" %}</a></li>
+                    <li><a href="https://github.com/Alir3z4/html2text/">{% trans "Html2Text" %}</a></li>
+                </ul>
+            </div>
+
+            <div class="row col-lg-2" style="margin: 0 13px;">
+                <ul class="list-unstyled">
+                    <li class="title">{% trans "Development" %}</li>
+                    <li><a href="https://github.com/Alir3z4/markwhat">{% trans "Code" %}</a></li>
+                    <li><a href="https://github.com/Alir3z4/markwhat/issues">{% trans "Issues" %}</a></li>
+                    <li><a href="https://github.com/Alir3z4/markwhat/blob/master/README.rst">{% trans "Documentation" %}</a></li>
+                    <li><a href="https://travis-ci.org/Alir3z4/markwhat">{% trans "Testing" %}</a></li>
+                </ul>
+            </div>
+
+            <div class="row col-lg-2" style="margin: 0 13px;">
+                <ul class="list-unstyled">
+                    <li class="title">{% trans "Powered by" %}</li>
+                    <li><a href="https://www.python.org/">{% trans "Python" %}</a></li>
+                    <li><a href="https://www.djangoproject.com/">{% trans "Django" %}</a></li>
+                    <li><a href="http://www.heroku.com">{% trans "Heroku" %}</a></li>
+                    <li><a href="http://jquery.com/">{% trans "jQuery" %}</a></li>
+            </div>
+
+        </div>
+    </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 {% block extra_js %}{% endblock %}
