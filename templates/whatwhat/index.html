@@ -7,10 +7,12 @@
         <button class="col-lg-4 btn btn-lg btn-default" id="textile">{% trans "Textile" %}</button>
     </div>
     <div class="col-lg-6">
+        <label for="markwhat_textarea">{% trans "Markwhat" %}</label>
         <textarea class="form-control" style="width: 100%;"  name="markwhat" id="markwhat_textarea" rows="23"></textarea>
     </div>
     <div class="col-lg-6">
-        <textarea class="form-control" style="width: 100%;" name="markup" id="markup_textarea" rows="23"></textarea>
+        <label for="markup_textarea">{% trans "Markup" %}</label>
+        <textarea readonly class="form-control" style="width: 100%;" name="markup" id="markup_textarea" rows="23"></textarea>
     </div>
 {% endblock %}
 
