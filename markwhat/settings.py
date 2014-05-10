@@ -12,7 +12,9 @@ PROJECT_DIR = os.path.abspath(os.path.join(
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'markwhat.herokuapp.com'
+]
 
 
 # Application definition
